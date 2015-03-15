@@ -24,9 +24,6 @@ namespace WindowsPhoneClient
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private HubConnection hubConnection;
-        private SpeechRecognizer speechRecog = new SpeechRecognizer();
-        private IHubProxy messageProxy;
         public MainPage()
         {
             this.InitializeComponent();
@@ -34,11 +31,11 @@ namespace WindowsPhoneClient
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
+
+
+        private HubConnection hubConnection;
+        private SpeechRecognizer speechRecog = new SpeechRecognizer();
+        private IHubProxy messageProxy;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
@@ -54,9 +51,7 @@ namespace WindowsPhoneClient
 
         private async void ButtonSTT_Click(object sender, RoutedEventArgs e)
         {
-            // Compile the dictation grammar
             await speechRecog.CompileConstraintsAsync();
-            // Start Recognition
             SpeechRecognitionResult speechRecognitionResult = await this.speechRecog.RecognizeWithUIAsync();
             if (speechRecognitionResult.Text.ToLower().Contains("turn on the light"))
             {

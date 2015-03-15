@@ -13,7 +13,7 @@
             <TextBox Header="Pin" x:Name="TextBoxPin"/>
             <ToggleSwitch x:Name="ToggleSwitchStatus"/>
             <Button HorizontalAlignment="Stretch" Content="Send" Click="Button_Click"/>
-            <Button Content="Speach To Text" HorizontalAlignment="Stretch" x:Name="ButtonSTT" Click="ButtonSTT_Click"/>
+            <Button Content="Speech To Text" HorizontalAlignment="Stretch" x:Name="ButtonSTT" Click="ButtonSTT_Click"/>
         </StackPanel>
     </Grid>
 </Page>
