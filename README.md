@@ -2,6 +2,8 @@
 
 Windows Phone'dan raspberry pi'a SignalR ile komut gönderebilmek için yazdığım bir proje. 
 
+<p align="center"><img alt="Raspberry Windows Phone" src="http://www.altinokdarici.com/image.axd?picture=RPiDemo_.jpg"></p>
+
 Örnek olarak Windows Phone'dan pin numarası ve on/off belirterek basit bir led yakmanız mümkün.
 Ayrıca Windows Phone SpeechToText özelleğini kullanarak ses ile komut göndermeyi örnekliyor.
 
